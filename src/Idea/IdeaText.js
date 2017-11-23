@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { AppRegistry, asset, Pano, Text, View, Animated } from 'react-vr';
 
+
 export default class IdeaText extends Component {
   render() {
     return (
@@ -22,5 +23,5 @@ export default class IdeaText extends Component {
   }
 }
 
-{matrix : [0.01,0,0,0, 0,0.01,0,0, 0,0,0.1,0, 3,2,0,1]}
-{scale : [0.01, 0.02, 0.03]}
+// {matrix : [0.01,0,0,0, 0,0.01,0,0, 0,0,0.1,0, 3,2,0,1]}
+// {scale : [0.01, 0.02, 0.03]}
