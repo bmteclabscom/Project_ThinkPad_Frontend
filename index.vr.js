@@ -1,25 +1,22 @@
 // React Style Imports
-
 import React from 'react';
-import { AppRegistry, asset, Pano, Text, View } from 'react-vr';
+import { AppRegistry, asset, Pano, Text, View, VideoPano } from 'react-vr';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-// import { BrowserRouter as Router } from 'react-router-dom';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 //Project Imports
 
-import IdeaContainer from './src/Idea/IdeaContainer.js';
+import SpaceContainer from './src/Space/SpaceContainer.js';
 import { rootReducer } from './src/redux/reducers/rootReducer';
 
 
 // ------------------------------------------------------------
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
+const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))
 
 let { dispatch, getState } = store;
-
-console.log(getState())
 
 export default class frontend extends React.Component {
   render() {
@@ -27,7 +24,9 @@ export default class frontend extends React.Component {
       <Provider store={store}>
         <View>
           <Pano source={asset('sky.jpg')}/>
-          <IdeaContainer/>
+
+
+          <SpaceContainer/>
         </View>
       </Provider>
     );
@@ -35,3 +34,7 @@ export default class frontend extends React.Component {
 };
 
 AppRegistry.registerComponent('frontend', () => frontend);
+
+
+// <VideoPano source={asset('falls.mp4')}/> //VIDEO EXPERIENCE
+// React VR can be loaded as an Iframe!

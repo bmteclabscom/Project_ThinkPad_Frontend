@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import { AppRegistry, asset, Pano, Text, View } from 'react-vr';
 import IdeaText from './IdeaText.js';
 import { ideas } from '../../ideaSeed.js';
+import { connect } from 'react-redux';
 
 
-export default class IdeaContainer extends Component {
+class IdeaContainer extends Component {
   render() {
+    console.log(this)
     return (
       <View>
       <IdeaText text={ideas[0]} location={[1,3,-9]}/>
@@ -17,7 +19,8 @@ export default class IdeaContainer extends Component {
       <IdeaText text={ideas[6]} location={[-3,3,-12]}/>
       <IdeaText text={ideas[7]} location={[-6,3,-12]}/>
     </View>
-
     );
   }
 }
+
+export default connect(mapStateToProps,mapDispatchToProps)(IdeaContainer)

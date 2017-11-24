@@ -1,4 +1,7 @@
 
+export function TRIGGER() {
+  return {type: 'TRIGGER'}
+}
 
 //
 // import MovieApi from "../services/movieapi";
