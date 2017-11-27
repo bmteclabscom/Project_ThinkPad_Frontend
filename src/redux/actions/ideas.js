@@ -1,7 +1,10 @@
 
-export function TRIGGER() {
-  return {type: 'TRIGGER'}
+export function FADER() {
+  return {type: 'FADER'}
 }
+
+
+
 
 //
 // import MovieApi from "../services/movieapi";

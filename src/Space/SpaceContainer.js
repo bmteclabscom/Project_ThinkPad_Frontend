@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
-import { AppRegistry, asset, Pano, Text, View } from 'react-vr';
+import { AppRegistry, asset, Pano, Text, View, Animated } from 'react-vr';
 import { connect } from 'react-redux';
-import { TRIGGER } from '../redux/actions/ideas.js'
+import { FADE } from '../redux/actions/ideas.js';
+import IdeaContainer from '../Idea/IdeaContainer.js';
+
+
 
 class SpaceContainer extends Component {
 
-  trigger = () => {
-    this.props.setTrigger()
-  }
-
   render(){
-    this.trigger()
     return(
       <View>
+        <IdeaContainer/>
       </View>
     )
   }
@@ -20,14 +19,14 @@ class SpaceContainer extends Component {
 
 function mapStateToProps(state) {
   return {
-    space: state.space
+
   }
 }
 
 
 function mapDispatchToProps(dispatch) {
   return {
-    setTrigger: () => {dispatch(TRIGGER())}
+
   }
 }
 

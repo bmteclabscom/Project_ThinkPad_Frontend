@@ -1,26 +1,40 @@
 import React, { Component } from 'react';
-import { AppRegistry, asset, Pano, Text, View } from 'react-vr';
+import { View, Text } from 'react-vr';
 import IdeaText from './IdeaText.js';
-import { ideas } from '../../ideaSeed.js';
-import { connect } from 'react-redux';
-
+import { ideas } from './IdeaSeed.js'
+import { connect } from 'react-redux'
+import { FADER } from '../redux/actions/ideas.js'
 
 class IdeaContainer extends Component {
-  render() {
-    console.log(this)
-    return (
+
+  handleClick = () => {console.log('test')}
+
+  render(){
+    console.log(this.handleClick)
+    return(
       <View>
-      <IdeaText text={ideas[0]} location={[1,3,-9]}/>
-      <IdeaText text={ideas[1]} location={[3,3,-12]}/>
-      <IdeaText text={ideas[2]} location={[6,3,-8]}/>
-      <IdeaText text={ideas[3]} location={[9,3,-7]}/>
-      <IdeaText text={ideas[4]} location={[12,3,-6]}/>
-      <IdeaText text={ideas[5]} location={[-1,3,-12]}/>
-      <IdeaText text={ideas[6]} location={[-3,3,-12]}/>
-      <IdeaText text={ideas[7]} location={[-6,3,-12]}/>
-    </View>
-    );
+        <IdeaText
+          text={`${ideas[Math.floor(Math.random()*ideas.length)]}`}
+          location={[0,2,-8]}
+          fader={this.props.fadeStart}
+          onClick={this.onClick}
+        />
+      </View>
+    )
   }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(IdeaContainer)
+function mapStateToProps(state) {
+  console.log(state)
+  return {
+    fadeInit: state.ideas.fade
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    fadeStart: (() => {dispatch(FADER())})
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(IdeaContainer);
