@@ -1,9 +1,7 @@
-
+import { Animated } from 'react-vr'
 
 const defaultState = {
-  ideas: {
-    fade: 0 
-  }
+  
 }
 
 export function rootReducer(state = defaultState, action) {

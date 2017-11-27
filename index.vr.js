@@ -15,44 +15,16 @@ import { rootReducer } from './src/redux/reducers/rootReducer';
 
 // ------------------------------------------------------------
 
-// const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))
-//
-// let { dispatch, getState } = store;
-//
-// export default class frontend extends React.Component {
-//   render() {
-//     return (
-//       <Provider store={store}>
-//         <View>
-//           <Pano source={asset('sky.jpg')}/>
-//           <SpaceContainer/>
-//         </View>
-//       </Provider>
-//     );
-//   }
-// };
-//
-// AppRegistry.registerComponent('frontend', () => frontend);
-
-
-// <VideoPano source={asset('falls.mp4')}/> //VIDEO EXPERIENCE
-// React VR can be loaded as an Iframe!
-//View is just a wrapper like div, which allows to wrap multiple elements.
-
-import { FADER } from './src/redux/actions/ideas.js'
-
-
-
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))
 
 let { dispatch, getState } = store;
 
-export default class frontend extends Component {
+export default class frontend extends React.Component {
   render() {
     return (
       <Provider store={store}>
         <View>
-          <VideoPano source={asset('test2.mp4')} loop={true}/>
+          <Pano source={asset('sky.jpg')}/>
           <SpaceContainer/>
         </View>
       </Provider>
@@ -61,3 +33,27 @@ export default class frontend extends Component {
 };
 
 AppRegistry.registerComponent('frontend', () => frontend);
+
+
+// <VideoPano source={asset('falls.mp4')}/> //VIDEO EXPERIENCE
+// React VR can be loaded as an Iframe!
+//View is just a wrapper like div, which allows to wrap multiple elements.
+//
+// const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))
+//
+// let { dispatch, getState } = store;
+//
+// export default class frontend extends Component {
+//   render() {
+//     return (
+//       <Provider store={store}>
+//         <View>
+//           <VideoPano source={asset('test.mp4')} loop={true}/>
+//           <SpaceContainer/>
+//         </View>
+//       </Provider>
+//     );
+//   }
+// };
+//
+// AppRegistry.registerComponent('frontend', () => frontend);
