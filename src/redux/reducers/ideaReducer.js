@@ -1,16 +1,17 @@
+
+//------------------Default State----------------------
+
 defaultState = {
-  ideaList: [], //Make backend API request for Ideas
-  renderedIdeas: [], //Ideas which are currently displayed in space
-  renderedIdeaCount: 0, //Integer representation of currently rendered ideas.
-  nextIdea: null //following idea to be rendered on page.
+  ideaList: ['This is not the greatest Idea in the world, this is just a tribute.'], //List of ideas retrieved from backend api.
+  currentlyRenderedIdeas: [], //Ideas which are currently displayed in idea component.
 }
 
+//-----------------Reducer Function-----------------------
 function ideaReducer(state = defaultState, action ) {
   switch(action.type) {
-    //retrieveIdeaList
-    //getIdeaCount
-    //getListOfRenderedIdeas
-    //GetNextIdea
+    case 'PRE_LOAD_IDEAS' :
+      console.log('PreLoadIdeas has run')
+      return { ...state, ideaList: [...action.payload]};
     default :
       return state;
   }

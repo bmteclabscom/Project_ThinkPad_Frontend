@@ -4,19 +4,22 @@ import { Text, VrButton, View } from 'react-vr'
 
 import { FADER } from '../redux/actions/ideas.js'
 
-//------------------------------------
+//------------------Idea Text Component---------------------
 
 class IdeaText extends Component {
 
   state = {
     fadeAnim: new Animated.Value(0),
-    panAnim: new Animated.Value(-20)
+    panAnim: new Animated.Value(-60)
   }
 
+//------------------Other Methods---------------------
   log() {
     console.log('clicking name')
   }
 
+
+//------------------LifeCycle Methods---------------------
   render() {
     Animated.timing(
       this.state.fadeAnim,
@@ -29,15 +32,17 @@ class IdeaText extends Component {
     Animated.timing(
       this.state.panAnim,
       {
-        toValue: 20,
+        toValue: 400,
         duration: 100000
       }
     ).start()
 
+//------------------Return JSX---------------------
+
     return(
       <Animated.View style={{
         opacity: this.state.fadeAnim,
-        transform: [{translateY: 0 },{translateX: this.state.panAnim},{translateZ:-15}]
+        transform: [{translateY: this.props.y },{translateX: this.state.panAnim},{translateZ: this.props.z}]
       }}>
         <VrButton onClick={this.log}>
           <Text

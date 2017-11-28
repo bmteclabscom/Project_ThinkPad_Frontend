@@ -1,10 +1,11 @@
 // React Style Imports
+
 import React, { Component } from 'react';
 import { AppRegistry, asset, Pano, Text, View, VideoPano } from 'react-vr';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
+import thunk from 'redux-thunk';
 
 //Project Imports
 
@@ -13,7 +14,7 @@ import { rootReducer } from './src/redux/reducers/rootReducer';
 
 
 
-// ------------------------------------------------------------
+// -----------------------WITHOUT VIDEO------------------------------
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))
 
@@ -34,11 +35,8 @@ export default class frontend extends React.Component {
 
 AppRegistry.registerComponent('frontend', () => frontend);
 
+// ---------------------WITH VIDEO------------------------------
 
-// <VideoPano source={asset('falls.mp4')}/> //VIDEO EXPERIENCE
-// React VR can be loaded as an Iframe!
-//View is just a wrapper like div, which allows to wrap multiple elements.
-//
 // const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))
 //
 // let { dispatch, getState } = store;

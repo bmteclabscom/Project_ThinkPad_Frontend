@@ -1,12 +1,44 @@
+import { tempIdeas } from '../../IdeaSeed.js'
 
-export function FADER() {
-  return {type: 'FADER'}
+export function PRE_LOAD_IDEAS(ideas) {
+  return {type: 'PRE_LOAD_IDEAS', payload: [...tempIdeas]}
 }
 
 
 
 
-//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // import MovieApi from "../services/movieapi";
 // export function fetchMovies() {
 //   return function(dispatch) {

@@ -2,9 +2,6 @@ import { Animated } from 'react-vr';
 import { combineReducers } from 'redux';
 import ideaReducer from './ideaReducer';
 
-
-console.log(ideaReducer)
-
 const rootReducer = combineReducers({
   idea: ideaReducer
 })
