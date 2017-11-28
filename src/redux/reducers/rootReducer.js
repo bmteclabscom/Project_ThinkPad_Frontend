@@ -1,20 +1,22 @@
-import { Animated } from 'react-vr'
+import { Animated } from 'react-vr';
+import { combineReducers } from 'redux';
+import ideaReducer from './ideaReducer';
 
-const defaultState = {
-  
-}
 
-export function rootReducer(state = defaultState, action) {
-  switch(action.type){
-    case 'FADER' :
-      console.log('FADED')
-      return {...state}
-    default:
-      return {...state};
-  }
-}
+console.log(ideaReducer)
 
-//Reducers should set default state,
-//
+const rootReducer = combineReducers({
+  idea: ideaReducer
+})
 
-//Fader should go in an idea reducer, but I am putting it in the root reducer for now, to simply ensure functionality.
+export { rootReducer };
+
+// export function rootReducer(state = defaultState, action) {
+//   switch(action.type){
+//     case 'FADER' :
+//       console.log('FADED')
+//       return {...state}
+//     default:
+//       return {...state};
+//   }
+// }

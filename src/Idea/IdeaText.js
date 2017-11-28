@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { Animated } from 'react-vr'
 import { Text, VrButton, View } from 'react-vr'
+
 import { FADER } from '../redux/actions/ideas.js'
+
+//------------------------------------
 
 class IdeaText extends Component {
 
@@ -11,27 +14,15 @@ class IdeaText extends Component {
   }
 
   log() {
-    console.log('aefaef')
+    console.log('clicking name')
   }
 
-  // componentDidMount(){
-  //   Animated.timing(
-  //     this.state.fadeAnim,
-  //     {toValue: 1}
-  //   ).start();
-  //   Animated.timing(
-  //     this.state.panAnim,
-  //     {toValue:5}
-  //   ).start();
-  // }
-
   render() {
-
     Animated.timing(
       this.state.fadeAnim,
       {
         toValue: 1,
-        duration: 10000
+        duration: 15000
       }
     ).start();
 
@@ -44,28 +35,25 @@ class IdeaText extends Component {
     ).start()
 
     return(
-      <Animated.View>
-        <VrButton onClick={this.log} width={100}>
-          <Animated.Text
+      <Animated.View style={{
+        opacity: this.state.fadeAnim,
+        transform: [{translateY: 0 },{translateX: this.state.panAnim},{translateZ:-15}]
+      }}>
+        <VrButton onClick={this.log}>
+          <Text
             style={{
-              position: 'absolute',
-              opacity: this.state.fadeAnim,
               color: '#000000',
               fontSize: 0.8,
               fontWeight: '400',
-              layoutOrigin: [0.5, 0.5],
               paddingLeft: 0.2,
               paddingRight: 0.2,
               textAlign: 'center',
-              textAlignVertical: 'center',
-              transform: [{translateY: 0},{translateX: this.state.panAnim},{translateZ:-10}]
+              textAlignVertical: 'center'
             }}>
             {this.props.text}
-          </Animated.Text>
+          </Text>
         </VrButton>
       </Animated.View>
-
-
     )
   }
 }

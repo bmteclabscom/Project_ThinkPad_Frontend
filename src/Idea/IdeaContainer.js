@@ -20,13 +20,17 @@ class IdeaContainer extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log(state)
   return {
+    ideaList: state.ideaList,
+    renderedIdeas: state.renderedIdeas,
+    renderedIdeaCount: state.renderedIdeaCount,
+    nextIdea: state.nextIdea
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
+    
   }
 }
 
