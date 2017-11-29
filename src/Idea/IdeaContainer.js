@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { View, Text, VrButton } from 'react-vr';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 
 import IdeaText from './IdeaText.js';
-import { PRE_LOAD_IDEAS } from '../redux/actions/ideas.js';
+import BackendAPI from '../redux/services/BackendAPI.js';
+import { PRE_LOAD_IDEAS } from '../redux/actions/ideaActions.js';
 
 
 //------------------IdeaContainer Component---------------------
@@ -11,19 +12,21 @@ class IdeaContainer extends Component {
 
   //------------------Other Methods---------------------
 
-  mapIdeasToJSX(ideas) {
-    newIdeas = [...ideas]
+  extractIdeaContents(ideas) {
+    return ideas.map(() => { return ideas.content })
+  }
+
+  mapIdeasToJSX(ideasArr) {
+    newIdeas = [...ideasArr]
+    console.log(newIdeas)
     ideaJSX = newIdeas.map((idea) => {return (<IdeaText
-      text={idea}
-      y={Math.random() * 40}
+      text={idea.content}
+      y={400}
       z={Math.random(10) * -100}
     />)})
     return ideaJSX
   }
 
-  generateText() {
-    setTimeout(function(){ alert("Hello"); }, 3000);
-  }
   //------------------Lifecycle Methods---------------------
 
   componentDidMount(){
@@ -32,12 +35,10 @@ class IdeaContainer extends Component {
   }
 
   render(){
-    console.log(this)
+
     return(
       <View>
-        {
-          this.mapIdeasToJSX(this.props.ideaList)
-        }
+        {this.mapIdeasToJSX(this.props.ideaList)}
       </View>
     )
   }
@@ -69,13 +70,5 @@ export default connect(mapStateToProps,mapDispatchToProps)(IdeaContainer);
 
 
 
-
-
-
-
-
-
-
-
-
+// add a set interval on the constructor
 // text={`${ideas[Math.floor(Math.random()*ideas.length)]}`}

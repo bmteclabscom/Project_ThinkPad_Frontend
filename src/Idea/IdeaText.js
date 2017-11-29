@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Animated } from 'react-vr'
 import { Text, VrButton, View } from 'react-vr'
 
-import { FADER } from '../redux/actions/ideas.js'
+import { FADER } from '../redux/actions/ideaActions.js'
 
 //------------------Idea Text Component---------------------
 
@@ -10,7 +10,7 @@ class IdeaText extends Component {
 
   state = {
     fadeAnim: new Animated.Value(0),
-    panAnim: new Animated.Value(-60)
+    panAnim: new Animated.Value(Math.random(10) * -1000)
   }
 
 //------------------Other Methods---------------------
@@ -32,8 +32,8 @@ class IdeaText extends Component {
     Animated.timing(
       this.state.panAnim,
       {
-        toValue: 400,
-        duration: 100000
+        toValue: 4000,
+        duration: 200000
       }
     ).start()
 
@@ -48,7 +48,7 @@ class IdeaText extends Component {
           <Text
             style={{
               color: '#000000',
-              fontSize: 0.8,
+              fontSize: 1,
               fontWeight: '400',
               paddingLeft: 0.2,
               paddingRight: 0.2,

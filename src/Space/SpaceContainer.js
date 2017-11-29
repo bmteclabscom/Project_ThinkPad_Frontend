@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
 import { AppRegistry, asset, Pano, Text, View, Animated } from 'react-vr';
 import { connect } from 'react-redux';
-import { FADE } from '../redux/actions/ideas.js';
+import { FADE } from '../redux/actions/ideaActions.js';
 import IdeaContainer from '../Idea/IdeaContainer.js';
 
 
 
 class SpaceContainer extends Component {
+
+//infinit loop
+//create empty array
+//append item to array
+//set timeout
+
+
 
   render(){
     return(

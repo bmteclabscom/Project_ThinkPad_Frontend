@@ -10,8 +10,9 @@ defaultState = {
 function ideaReducer(state = defaultState, action ) {
   switch(action.type) {
     case 'PRE_LOAD_IDEAS' :
-      console.log('PreLoadIdeas has run')
       return { ...state, ideaList: [...action.payload]};
+    case 'ADD_IDEA' :
+      return { ...state, ideaList: [...action.payload]}
     default :
       return state;
   }
