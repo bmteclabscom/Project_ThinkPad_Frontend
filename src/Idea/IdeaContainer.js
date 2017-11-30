@@ -1,53 +1,48 @@
+//========== Imports ==========
+
+  //---------- External Imports ----------
 import React, { Component } from 'react';
 import { View, Text, VrButton } from 'react-vr';
 import { connect } from 'react-redux';
 
+  //---------- Internal Imports ----------
 import IdeaText from './IdeaText.js';
 import BackendAPI from '../redux/services/BackendAPI.js';
 import { PRE_LOAD_IDEAS } from '../redux/actions/ideaActions.js';
 
 
-//------------------IdeaContainer Component---------------------
+//========== IdeaContainer Component ==========
+
 class IdeaContainer extends Component {
 
-  //------------------Other Methods---------------------
-
-  extractIdeaContents(ideas) {
-    return ideas.map(() => { return ideas.content })
-  }
-
-  mapIdeasToJSX(ideasArr) {
-    newIdeas = [...ideasArr]
-    console.log(newIdeas)
-    ideaJSX = newIdeas.map((idea) => {return (<IdeaText
+  //---------- Other Methods ----------
+  mapIdeasContentToJSX(ideasObjArr) {
+    newIdeas = [...ideasObjArr]
+    ideasJSX = newIdeas.map((idea) => {return (<IdeaText
       text={idea.content}
-      y={400}
-      z={Math.random(10) * -100}
+      y={Math.random() * 30}
+      z={Math.random() * -80}
     />)})
-    return ideaJSX
+    return ideasJSX
   }
 
-  //------------------Lifecycle Methods---------------------
-
+  //---------- Lifecycle Methods ----------
   componentDidMount(){
     this.props.preLoadIdeas()
-
   }
 
   render(){
-
     return(
       <View>
-        {this.mapIdeasToJSX(this.props.ideaList)}
+        {this.mapIdeasContentToJSX(this.props.ideaList)}
       </View>
     )
   }
 }
 
-//------------------Redux Mapping---------------------
+//========== Redux Mapping ==========
 
 function mapStateToProps(state) {
-  // console.log(state)
   return {
     ideaList: state.idea.ideaList
   }
@@ -58,6 +53,8 @@ function mapDispatchToProps(dispatch) {
     preLoadIdeas: (() => {dispatch(PRE_LOAD_IDEAS())})
   }
 }
+
+//========== Exports ==========
 
 export default connect(mapStateToProps,mapDispatchToProps)(IdeaContainer);
 

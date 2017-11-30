@@ -33,7 +33,7 @@ class IdeaText extends Component {
       this.state.panAnim,
       {
         toValue: 4000,
-        duration: 200000
+        duration: 300000
       }
     ).start()
 
@@ -42,6 +42,7 @@ class IdeaText extends Component {
     return(
       <Animated.View style={{
         opacity: this.state.fadeAnim,
+        position: 'absolute',
         transform: [{translateY: this.props.y },{translateX: this.state.panAnim},{translateZ: this.props.z}]
       }}>
         <VrButton onClick={this.log}>
