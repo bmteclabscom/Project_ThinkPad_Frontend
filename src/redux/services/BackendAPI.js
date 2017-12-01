@@ -2,11 +2,11 @@ const URL = 'http://localhost:3000/'
 
 const createPost = (obj) => {
   return {
+      method: "POST",
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      method: "POST",
       body: JSON.stringify(obj)
   }
 }

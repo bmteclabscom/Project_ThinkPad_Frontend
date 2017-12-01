@@ -5,8 +5,30 @@
     <meta name="Project: Thinkspace" content="width=device-width, initial-scale=.5, user-scalable=no">
   </head>
   <body>
+    <div>
+      <h1 style='font-family: sans-serif; position: absolute; z-index: 1; top: 6%; left: 45%'>THINKSPACE</h1>
+      <form id='idea-form'>
+        <input style='position: absolute; z-index: 1; bottom: 10%; left: 20%; height 100px; width: 70%;' type='text' value='' placeholder="Please Enter An Idea Here!"/>
+      </form>
+    </div>
     <!-- When you're ready to deploy your app, update this line to point to your compiled client.bundle.js -->
     <script src="./client.bundle?platform=vr"></script>
+    <script>
+      document.querySelector("#idea-form").addEventListener('submit', (e) => {
+        e.preventDefault();
+        fetch('http://localhost:3000/ideas', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body:  JSON.stringify({
+            content: e.target[0].value
+          })
+        })
+        .then(e.target[0].value = '')
+      })
+    </script>
     <script>
       // Initialize the React VR application
       ReactVR.init(
