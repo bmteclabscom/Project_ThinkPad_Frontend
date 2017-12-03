@@ -2,13 +2,35 @@
   <head>
     <title>Project: Thinkspace</title>
     <style>body { margin: 0; }</style>
+    <link rel="stylesheet" href="./index.html">
     <meta name="Project: Thinkspace" content="width=device-width, initial-scale=.5, user-scalable=no">
   </head>
   <body>
     <div>
-      <h1 style='font-family: sans-serif; position: absolute; z-index: 1; top: 6%; left: 45%'>THINKSPACE</h1>
+      <div class="relative" style="
+      width:500px;
+       height:500px;
+       margin:0 auto;
+       background:#f7f7f7;
+       position:absolute;
+       left:50%;
+       top:2%;
+       margin-left:-250px;
+       ">
+      <img id='logoIMG' src='./logo.png' draggable="false" style='position: absolute; z-index: 1; height: 100px;'>
+      </div>
       <form id='idea-form'>
-        <input style='position: absolute; z-index: 1; bottom: 10%; left: 20%; height 100px; width: 70%;' type='text' value='' placeholder="Please Enter An Idea Here!"/>
+        <input
+          style='
+            position: absolute;
+            z-index: 1;
+            bottom: 10%;
+            left: 50%;
+            height 100px;
+            width: 70%;'
+          type='text'
+          value=''
+          placeholder="Please Enter An Idea Here!"/>
       </form>
     </div>
     <!-- When you're ready to deploy your app, update this line to point to your compiled client.bundle.js -->
