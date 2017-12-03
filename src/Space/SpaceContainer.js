@@ -3,7 +3,7 @@ import { AppRegistry, asset, Pano, Text, View, Animated } from 'react-vr';
 import { connect } from 'react-redux';
 import { FADE } from '../redux/actions/ideaActions.js';
 import IdeaContainer from '../Idea/IdeaContainer.js';
-
+import IdeaBarContainer from './IdeaBar/IdeaBarContainer.js';
 
 
 class SpaceContainer extends Component {
@@ -19,6 +19,7 @@ class SpaceContainer extends Component {
     return(
       <View>
         <IdeaContainer/>
+        <IdeaBarContainer/>
       </View>
     )
   }
