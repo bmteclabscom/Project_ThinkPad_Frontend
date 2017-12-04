@@ -8,6 +8,8 @@ var autoWriteTimer;
 
 var isMobile, isIE;
 
+
+
 window.onload = function() {
 
     isMobile = navigator && navigator.platform && navigator.platform.match(/^(iPad|iPod|iPhone)$/);
@@ -112,8 +114,24 @@ window.onload = function() {
 
     autoWriteTimer = setTimeout(function() {
         if (lastContent != "") return;
-        targetContent = "Add an idea..!";
+        targetContent = "Add an idea..?!";
         refresh();
     }, 1000);
+
+    document.querySelector("#idea-form").addEventListener('submit', (e) => {
+      e.preventDefault();
+      fetch('http://localhost:3000/ideas', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body:  JSON.stringify({
+          content: e.target[0].value
+        })
+      })
+      .then(e.target[0].value = '')
+      .then(() => input.innerHTML = 'Add Another?')
+    })
 
 }

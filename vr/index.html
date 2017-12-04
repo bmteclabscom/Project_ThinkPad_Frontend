@@ -19,14 +19,14 @@
        top:2%;
        margin-left:-250px;
        ">
-      <img id='logoIMG' src='./logo.png' draggable="false" style='position: absolute; z-index: 1; height: 100px; margin-left: 60px'>
+      <img id='logoIMG' src='./logo.png' draggable="false" style='position: absolute; z-index: 1; height: 30px; margin-left: 85px; opacity: .8'>
       </div>
     </div>
 
     <div id="container" style='position: absolute; z-index: 1; bottom: 5%; right: 22%;'>
         <div id="input"></div>
         <form id='idea-form'>
-          <input type="text" id="hiddenInput" maxlength=95>
+          <input type="text" id="hiddenInput" maxlength=95 autocomplete=off>
         </form>
 
     </div>
@@ -36,21 +36,7 @@
     <script src="./input.js"></script>
 
     <script>
-      document.querySelector("#idea-form").addEventListener('submit', (e) => {
-        e.preventDefault();
-        fetch('http://localhost:3000/ideas', {
-          method: 'POST',
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          },
-          body:  JSON.stringify({
-            content: e.target[0].value
-          })
-        })
-        .then(e.target[0].value = '')
-        console.log(this)
-      })
+
     </script>
 
     <script>
