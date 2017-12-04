@@ -2,9 +2,10 @@
   <head>
     <title>Project: Thinkspace</title>
     <style>body { margin: 0; }</style>
-    <link rel="stylesheet" href="./index.html">
+    <link rel="stylesheet" href="./index.css">
     <meta name="Project: Thinkspace" content="width=device-width, initial-scale=.5, user-scalable=no">
   </head>
+
   <body>
     <div>
       <div class="relative" style="
@@ -17,9 +18,10 @@
        top:2%;
        margin-left:-250px;
        ">
-      <img id='logoIMG' src='./logo.png' draggable="false" style='position: absolute; z-index: 1; height: 100px;'>
+      <img id='logoIMG' src='./logo.png' draggable="false" style='position: absolute; z-index: 1; height: 100px; margin-left: 60px'>
       </div>
-      <form id='idea-form'>
+    </div>
+      <!-- <form id='idea-form'>
         <input
           style='
             position: absolute;
@@ -31,10 +33,15 @@
           type='text'
           value=''
           placeholder="Please Enter An Idea Here!"/>
-      </form>
+      </form> -->
+
+    <div id="container" style='position: absolute; z-index: 1; bottom: 10%; right: 22%;'>
+        <div id="input"></div>
+        <input type="text" id="hiddenInput">
     </div>
     <!-- When you're ready to deploy your app, update this line to point to your compiled client.bundle.js -->
     <script src="./client.bundle?platform=vr"></script>
+    <script src="./input.js"></script>
     <script>
       document.querySelector("#idea-form").addEventListener('submit', (e) => {
         e.preventDefault();
