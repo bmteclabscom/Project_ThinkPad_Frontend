@@ -9,35 +9,21 @@
   <body>
 
     <div>
-      <div class="relative" style="
-      width:500px;
-       height:500px;
-       margin:0 auto;
-       background:#f7f7f7;
-       position:absolute;
-       left:50%;
-       top:2%;
-       margin-left:-250px;
-       ">
-      <img id='logoIMG' src='./logo.png' draggable="false" style='position: absolute; z-index: 1; height: 30px; margin-left: 85px; opacity: .8'>
+      <div id='logoDIV'class="relative" >
+      <img id='logoIMG' src='./logo.png' draggable="false" style='position: absolute; z-index: 1; height: 100px; margin-left: 85px; opacity: .9'>
       </div>
     </div>
 
     <div id="container" style='position: absolute; z-index: 1; bottom: 5%; right: 22%;'>
         <div id="input"></div>
-        <form id='idea-form'>
-          <input type="text" id="hiddenInput" maxlength=95 autocomplete=off>
-        </form>
-
+          <form id='idea-form'>
+            <input type="text" id="hiddenInput" maxlength=95 autocomplete=off>
+          </form>
     </div>
 
     <!-- When you're ready to deploy your app, update this line to point to your compiled client.bundle.js -->
     <script src="./client.bundle?platform=vr"></script>
     <script src="./input.js"></script>
-
-    <script>
-
-    </script>
 
     <script>
       // Initialize the React VR application

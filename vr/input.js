@@ -91,9 +91,6 @@ window.onload = function() {
         }, false);
 
         if (!isIE) {
-            // Input event is buggy on IE, so don't bother
-            // (https://msdn.microsoft.com/en-us/library/gg592978(v=vs.85).aspx#feedback)
-            // We will use a timer instead (below)
             hiddenInput.addEventListener('input', function(e) {
                 e.preventDefault();
                 targetContent = hiddenInput.value;
@@ -131,7 +128,7 @@ window.onload = function() {
         })
       })
       .then(e.target[0].value = '')
-      .then(() => input.innerHTML = 'Add Another?')
+      .then(input.innerHTML = 'Add Another Idea?!')
     })
 
 }

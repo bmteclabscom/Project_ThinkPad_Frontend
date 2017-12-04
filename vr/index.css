@@ -6,6 +6,24 @@
         font-size: 40px;
     }
 
+    #logoDIV {
+      width:500px;
+      height:500px;
+      margin:0 auto;
+      position:absolute;
+      left:50%;
+      top:2%;
+      margin-left:-250px;
+    }
+
+    #logoIMG {
+    position: absolute;
+    z-index: 1;
+    height: 100px;
+    margin-left: 85px;
+    opacity: .9
+    }
+
     #hiddenInput {
         font-size: 40px;
         font-family: 'Oswald', sans-serif;
