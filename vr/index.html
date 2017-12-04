@@ -7,6 +7,7 @@
   </head>
 
   <body>
+
     <div>
       <div class="relative" style="
       width:500px;
@@ -21,27 +22,19 @@
       <img id='logoIMG' src='./logo.png' draggable="false" style='position: absolute; z-index: 1; height: 100px; margin-left: 60px'>
       </div>
     </div>
-      <!-- <form id='idea-form'>
-        <input
-          style='
-            position: absolute;
-            z-index: 1;
-            bottom: 10%;
-            left: 50%;
-            height 100px;
-            width: 70%;'
-          type='text'
-          value=''
-          placeholder="Please Enter An Idea Here!"/>
-      </form> -->
 
-    <div id="container" style='position: absolute; z-index: 1; bottom: 10%; right: 22%;'>
+    <div id="container" style='position: absolute; z-index: 1; bottom: 5%; right: 22%;'>
         <div id="input"></div>
-        <input type="text" id="hiddenInput">
+        <form id='idea-form'>
+          <input type="text" id="hiddenInput" maxlength=95>
+        </form>
+
     </div>
+
     <!-- When you're ready to deploy your app, update this line to point to your compiled client.bundle.js -->
     <script src="./client.bundle?platform=vr"></script>
     <script src="./input.js"></script>
+
     <script>
       document.querySelector("#idea-form").addEventListener('submit', (e) => {
         e.preventDefault();
@@ -56,8 +49,10 @@
           })
         })
         .then(e.target[0].value = '')
+        console.log(this)
       })
     </script>
+
     <script>
       // Initialize the React VR application
       ReactVR.init(

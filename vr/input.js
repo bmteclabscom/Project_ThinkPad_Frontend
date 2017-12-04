@@ -112,7 +112,8 @@ window.onload = function() {
 
     autoWriteTimer = setTimeout(function() {
         if (lastContent != "") return;
-        targetContent = "type something...";
+        targetContent = "Add an idea..!";
         refresh();
-    }, 2000);
+    }, 1000);
+
 }
