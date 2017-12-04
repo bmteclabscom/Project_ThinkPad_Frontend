@@ -10,20 +10,26 @@
 
     <div>
       <div id='logoDIV'class="relative" >
-      <img id='logoIMG' src='./logo.png' draggable="false" style='position: absolute; z-index: 1; height: 100px; margin-left: 85px; opacity: .9'>
+      <img id='logoIMG' src='./logo.png' draggable="false">
       </div>
     </div>
 
-    <div id="container" style='position: absolute; z-index: 1; bottom: 5%; right: 22%;'>
+    <div id="container" style='position: absolute; z-index: 2; bottom: 0%; right: 22%;'>
         <div id="input"></div>
           <form id='idea-form'>
             <input type="text" id="hiddenInput" maxlength=95 autocomplete=off>
           </form>
     </div>
 
+
+          <canvas id="cloudCover"></canvas>
+  
+
+
     <!-- When you're ready to deploy your app, update this line to point to your compiled client.bundle.js -->
     <script src="./client.bundle?platform=vr"></script>
     <script src="./input.js"></script>
+    <script src='./clouds.js'></script>
 
     <script>
       // Initialize the React VR application
@@ -35,5 +41,9 @@
         document.body
       );
     </script>
+      <script>
+        let x = document.body.querySelector('body > div:nth-child(8) > div > a:nth-child(2)')
+        x.style.bottom = '150px'
+      </script>
   </body>
 </html>
