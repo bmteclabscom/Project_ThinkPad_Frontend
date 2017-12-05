@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
-import { View, Text, VrButton } from 'react-vr';
+import { View, Text, VrButton, Image } from 'react-vr';
+import Minus from './Minus';
+import Plus from './Plus'
 
 class IdeaBarContainer extends Component {
   render(){
     return(
-      <View></View>
+      <View>
+        <Plus/>
+        <Minus/>
+      </View>
     )
   }
 }

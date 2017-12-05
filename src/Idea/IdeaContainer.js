@@ -32,6 +32,7 @@ class IdeaContainer extends Component {
   }
 
   render(){
+
     return(
       <View>
         {this.mapIdeasContentToJSX(this.props.ideaList)}
