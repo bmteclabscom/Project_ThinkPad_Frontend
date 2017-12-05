@@ -8,12 +8,11 @@ class Minus extends Component {
         <Image
           source={require('../../../static_assets/icon.png')}
           style={{
-            transform: [{translateY: 0 },{translateX: 0},{translateZ: -3}],
-            height: '100px',
-            width: '200px'
+            transform: [{translateY: -0.1 },{translateX: 0},{translateZ: -1}],
+            height: '25px',
+            width: '60px'
           }}
-        />
-        <Text style={{transform: [{translateY: 0 },{translateX: 0},{translateZ: -3}]}}>aefaef</Text>
+          />
       </View>
     )
   }

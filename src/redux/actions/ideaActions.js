@@ -7,3 +7,7 @@ export function PRE_LOAD_IDEAS() {
     })
   }
 }
+
+export function SELECT_IDEA(id) {
+  return {type: 'SELECT_IDEA', payload: id }
+}

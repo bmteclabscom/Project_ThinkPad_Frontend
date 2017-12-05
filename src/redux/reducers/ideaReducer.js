@@ -11,8 +11,8 @@ function ideaReducer(state = defaultState, action ) {
   switch(action.type) {
     case 'PRE_LOAD_IDEAS' :
       return { ...state, ideaList: [...action.payload]};
-    case 'ADD_IDEA' :
-      return { ...state, ideaList: [...action.payload]}
+    case 'SELECT_IDEA' :
+      return { ...state, selectedIdea: action.payload}
     default :
       return state;
   }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 import { Animated } from 'react-vr'
 import { Text, VrButton, View } from 'react-vr'
 
@@ -14,8 +15,12 @@ class IdeaText extends Component {
   }
 
 //------------------Other Methods---------------------
-  log() {
-    console.log('clicking name')
+  log = () => {
+    console.log(this.props.id)
+    this.props.selector(this.props.id)
+    this.setState({
+    })
+
   }
 
 
@@ -33,7 +38,7 @@ class IdeaText extends Component {
       this.state.panAnim,
       {
         toValue: 4000,
-        duration: 300000
+        duration: 350000
       }
     ).start()
 
@@ -48,13 +53,12 @@ class IdeaText extends Component {
         <VrButton onClick={this.log}>
           <Text
             style={{
+              flexDirection: 'row',
               color: '#000000',
               fontSize: 1,
               fontWeight: '400',
               paddingLeft: 0.2,
               paddingRight: 0.2,
-              textAlign: 'center',
-              textAlignVertical: 'center'
             }}>
             {this.props.text}
           </Text>

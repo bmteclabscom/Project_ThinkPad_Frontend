@@ -1,4 +1,4 @@
-//========== Imports ==========
+ //========== Imports ==========
 
   //---------- External Imports ----------
 import React, { Component } from 'react';
@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
   //---------- Internal Imports ----------
 import IdeaText from './IdeaText.js';
 import BackendAPI from '../redux/services/BackendAPI.js';
-import { PRE_LOAD_IDEAS } from '../redux/actions/ideaActions.js';
+import { PRE_LOAD_IDEAS, SELECT_IDEA } from '../redux/actions/ideaActions.js';
 
 
 //========== IdeaContainer Component ==========
@@ -16,12 +16,21 @@ import { PRE_LOAD_IDEAS } from '../redux/actions/ideaActions.js';
 class IdeaContainer extends Component {
 
   //---------- Other Methods ----------
+  getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive
+  }
+
   mapIdeasContentToJSX(ideasObjArr) {
     newIdeas = [...ideasObjArr]
     ideasJSX = newIdeas.map((idea) => {return (<IdeaText
       text={idea.content}
-      y={Math.random() * 30}
-      z={Math.random() * -80}
+      key={idea.id}
+      id={idea.id}
+      y={this.getRandomIntInclusive(-10, 10)}
+      z={this.getRandomIntInclusive(-15, -20)}
+      selector={this.props.selectIdea}
     />)})
     return ideasJSX
   }
@@ -32,7 +41,6 @@ class IdeaContainer extends Component {
   }
 
   render(){
-
     return(
       <View>
         {this.mapIdeasContentToJSX(this.props.ideaList)}
@@ -51,22 +59,11 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    preLoadIdeas: (() => {dispatch(PRE_LOAD_IDEAS())})
+    preLoadIdeas: (() => {dispatch(PRE_LOAD_IDEAS())}),
+    selectIdea: ((id) => {dispatch(SELECT_IDEA(id))})
   }
 }
 
 //========== Exports ==========
 
 export default connect(mapStateToProps,mapDispatchToProps)(IdeaContainer);
-
-
-
-
-
-
-
-
-
-
-// add a set interval on the constructor
-// text={`${ideas[Math.floor(Math.random()*ideas.length)]}`}
