@@ -7,13 +7,3 @@ const rootReducer = combineReducers({
 })
 
 export { rootReducer };
-
-// export function rootReducer(state = defaultState, action) {
-//   switch(action.type){
-//     case 'FADER' :
-//       console.log('FADED')
-//       return {...state}
-//     default:
-//       return {...state};
-//   }
-// }

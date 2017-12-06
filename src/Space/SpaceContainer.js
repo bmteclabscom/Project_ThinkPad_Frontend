@@ -2,7 +2,7 @@
 
   //---------- External Imports ----------
 import React, { Component } from 'react';
-import { AppRegistry, asset, Pano, Text, View, Animated } from 'react-vr';
+import { AppRegistry, asset, Pano, Text, View, Animated, DirectionalLight } from 'react-vr';
 import { connect } from 'react-redux';
 
   //---------- Internal Imports ----------
@@ -18,6 +18,7 @@ class SpaceContainer extends Component {
   render(){
     return(
       <View>
+        <DirectionalLight billboarding='on' style={{ transform: [{translateY: -2000},{translateX: 500}]}} intensity={1.3}/>
         <IdeaContainer/>
         <IdeaBarContainer/>
       </View>

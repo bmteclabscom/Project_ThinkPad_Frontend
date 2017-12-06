@@ -3,7 +3,7 @@
 
 defaultState = {
   ideaList: ['This is not the greatest Idea in the world, this is just a tribute.'], //List of ideas retrieved from backend api.
-  currentlyRenderedIdeas: [], //Ideas which are currently displayed in idea component.
+  selectedIdea: null //Idea which ∑as last selected by user.
 }
 
 //-----------------Reducer Function-----------------------
