@@ -3,7 +3,7 @@
   //---------- External Imports ----------
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Text, VrButton, View, Animated, Scene, Model, asset } from 'react-vr';
+import { Text, VrButton, View, Animated, Scene, Model, asset, PointLight } from 'react-vr';
 
   //---------- Internal Imports ----------
 import { SELECT_IDEA } from '../redux/actions/ideaActions.js'
@@ -75,7 +75,7 @@ class IdeaText extends Component {
       Animated.timing(
         this.state.y,
           {
-          toValue: 0,
+          toValue: -1,
           duration: 1000
           }
         ),
@@ -114,7 +114,7 @@ class IdeaText extends Component {
         </Text>
         <Model
           style={{
-            transform: [{translateX: -1},{translateY: -1.1 }]
+            transform: [{translateX: -1},{translateY: -1.1 }, {scale: .5}]
           }}
           source={{
             obj: asset('cloud.obj'),
