@@ -3,7 +3,7 @@
   //---------- External Imports ----------
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Text, VrButton, View, Animated } from 'react-vr';
+import { Text, VrButton, View, Animated, Scene, Model, asset } from 'react-vr';
 
   //---------- Internal Imports ----------
 import { SELECT_IDEA } from '../redux/actions/ideaActions.js'
@@ -14,7 +14,10 @@ class IdeaText extends Component {
   state = {
     x: new Animated.Value(this.randomInt(-2000, 0)),
     y: new Animated.Value(this.randomInt(0,10)),
-    z: new Animated.Value(this.randomInt(-10,-20)),
+    z: new Animated.Value(this.randomInt(-15,-25)),
+    camX: new Animated.Value(0),
+    camY: new Animated.Value(0),
+    camZ: new Animated.Value(0),
     opacity: new Animated.Value(0),
     lastPicked: false
 
@@ -33,6 +36,7 @@ class IdeaText extends Component {
 
 //------------------LifeCycle Methods---------------------
   render() {
+    console.log(this.state.camX._value)
     console.log(this.props)
     if(this.props.id !== this.props.selectedIdea) {
 
@@ -64,7 +68,7 @@ class IdeaText extends Component {
       Animated.timing(
         this.state.x,
           {
-            toValue: -4,
+            toValue: -10,
             duration: 1000
           }
         ),
@@ -78,25 +82,27 @@ class IdeaText extends Component {
       Animated.timing(
         this.state.z,
           {
-            toValue: -10,
+            toValue: -15,
             duration: 1000
           }
         )
       ]).start();
     }
-
-//
-// //------------------Return JSX---------------------
-
-//
+//------------------Return JSX---------------------
     return(
       <Animated.View style={{
-        maxWidth: '80em',
+        maxWidth: '70em',
         opacity: this.state.opacity,
         position: 'absolute',
         transform: [{translateY: this.state.y },{translateX: this.state.x},{translateZ: this.state.z}]
       }}>
+      <Scene style={{
+        transform: [{translate: [this.state.camX._value, this.state.camY._value, this.state.camZ._value]}]
+        // transform: [{translate: [4.3, 3.3, 2.3]}]
+      }}/>
       <VrButton onClick={this.handleClick}>
+
+
         <Text
           style={{
             flexDirection: 'row',
@@ -106,6 +112,17 @@ class IdeaText extends Component {
         }}>
           {this.props.text}
         </Text>
+        <Model
+          style={{
+            transform: [{translateX: -1},{translateY: -1.1 }]
+          }}
+          source={{
+            obj: asset('cloud.obj'),
+            mtl: asset('cloud.mtl'),
+          }}
+          lit={true}
+        />
+
       </VrButton>
     </Animated.View>
     )

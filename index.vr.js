@@ -1,7 +1,7 @@
 // React Style Imports
 
 import React, { Component } from 'react';
-import { AppRegistry, asset, Pano, Text, View, VideoPano } from 'react-vr';
+import { AppRegistry, asset, Pano, Text, View, VideoPano, Scene } from 'react-vr';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
@@ -25,7 +25,7 @@ export default class frontend extends React.Component {
     return (
       <Provider store={store}>
         <View>
-          <Pano style={{transform: [{rotate: '90deg'}]}} source={asset('sky.jpg')}/>
+          <Pano style={{transform: [{rotateY: '300deg'}]}} source={asset('sky3.jpg')}/>
           <SpaceContainer/>
         </View>
       </Provider>
