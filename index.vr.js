@@ -25,7 +25,7 @@ export default class frontend extends React.Component {
     return (
       <Provider store={store}>
         <View>
-          <Pano source={asset('sky.jpg')}/>
+          <Pano style={{transform: [{rotate: '90deg'}]}} source={asset('sky.jpg')}/>
           <SpaceContainer/>
         </View>
       </Provider>
