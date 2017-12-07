@@ -11,8 +11,6 @@ import thunk from 'redux-thunk';
 
 import SpaceContainer from './src/Space/SpaceContainer.js';
 import { rootReducer } from './src/redux/reducers/rootReducer';
-importScripts('https://js.pusher.com/4.1/pusher.worker.min.js');
-
 
 // -----------------------WITHOUT VIDEO------------------------------
 

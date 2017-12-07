@@ -12,12 +12,9 @@ import { SELECT_IDEA } from '../redux/actions/ideaActions.js'
 class IdeaText extends Component {
 
   state = {
-    x: new Animated.Value(this.randomInt(-2000, 0)),
-    y: new Animated.Value(this.randomInt(0,10)),
-    z: new Animated.Value(this.randomInt(-15,-25)),
-    camX: new Animated.Value(0),
-    camY: new Animated.Value(0),
-    camZ: new Animated.Value(0),
+    x: new Animated.Value(this.randomInt(-1000, -5)),
+    y: new Animated.Value(this.randomInt(-20,20)),
+    z: new Animated.Value(this.randomInt(-20,-35)),
     opacity: new Animated.Value(0),
     lastPicked: false
 
@@ -25,7 +22,10 @@ class IdeaText extends Component {
 //------------------Other Methods---------------------
   handleClick = () => {
     this.props.selectIdea(this.props.id);
-    this.state.lastPicked ? false : true;
+    this.setState({
+      lastPicked: this.state.lastPicked ? false : true
+    })
+    console.log(this)
   }
 
   randomInt(min, max) {
@@ -36,23 +36,21 @@ class IdeaText extends Component {
 
 //------------------LifeCycle Methods---------------------
   render() {
-    console.log(this.state.camX._value)
-    console.log(this.props)
     if(this.props.id !== this.props.selectedIdea) {
-
+      if(this.state.lastPicked === true && this.state.y._value === -1){
       Animated.timing(
         this.state.y,
         {
-          toValue: 20 ,
+          toValue: this.randomInt(-20,20) ,
           duration: 1000
         }
       ).start();
-
+    }
       Animated.timing(
         this.state.opacity,
         {
           toValue: 1,
-          duration: 15000
+          duration: 5000
         }
       ).start();
 
@@ -60,7 +58,7 @@ class IdeaText extends Component {
         this.state.x,
         {
           toValue: 4000,
-          duration: 350000
+          duration: 250000
         }
       ).start()} else {
 
@@ -96,13 +94,7 @@ class IdeaText extends Component {
         position: 'absolute',
         transform: [{translateY: this.state.y },{translateX: this.state.x},{translateZ: this.state.z}]
       }}>
-      <Scene style={{
-        transform: [{translate: [this.state.camX._value, this.state.camY._value, this.state.camZ._value]}]
-        // transform: [{translate: [4.3, 3.3, 2.3]}]
-      }}/>
       <VrButton onClick={this.handleClick}>
-
-
         <Text
           style={{
             flexDirection: 'row',

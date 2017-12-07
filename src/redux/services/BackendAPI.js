@@ -1,4 +1,5 @@
-const URL = 'http://localhost:3000/'
+const IP = 'http://192.168.2.204:3000/'
+// const URL = 'http://localhost:3000/'
 
 const createPost = (obj) => {
   return {
@@ -14,7 +15,7 @@ const createPost = (obj) => {
 export default class BackendAPI {
 
   static fetchIdeas() {
-    return fetch(`${URL}ideas`)
+    return fetch(`${IP}ideas`)
     .then(res => res.json())
   }
 
