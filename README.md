@@ -6,7 +6,7 @@ A virtual space for annonymously sharing ideas.
 
 Project: Thinkspace is a virtual environment allowing users to share and view ideas, annonymously.
 
-![alt text](https://i.imgur.com/SevMzZQ.jpg)
+![alt text](https://i.imgur.com/vwvL5#9Vz9Rsd.gif)
 
 
 
