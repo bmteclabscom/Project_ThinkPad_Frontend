@@ -6,7 +6,7 @@ A virtual space for annonymously sharing ideas.
 
 Project: Thinkspace is a virtual environment allowing users to share and view ideas, annonymously.
 
-![out](https://user-images.githubusercontent.com/27021764/34579187-f1b288c0-f155-11e7-83f3-0c18b24929a1.gif)
+![image](https://user-images.githubusercontent.com/27021764/34579809-8f542046-f158-11e7-8ed9-418f9a696c6d.png)
 
 I've been inspired to create a space where a human can without worry add an idea on any topic or question without having to consider who will see it and how they will be judged. My intention is to build a virtual world where users are given a space in which they can attract personally interesting ideas using custom filters. Users may then interact with any ideas which appear upon creation of their new filter. 
 
