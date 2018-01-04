@@ -19,9 +19,9 @@ Users have their own **spaces** which would be dynamically altered by a custom *
 ------------------------------------------------------------------------------------
 ### Examples of how someone might use ThinkSpace.
 
-**Case One**
+**Case One**:
 
-I've heard an idea which I think unique. This idea inspired me to see the world in a way I hadn't before. I'm wondering if there are other ideas like this floating around the world? I hop into Thinkspace.
+I've heard an idea which I think unique. Said idea inspired me to see the world in a way I hadn't before. I'm wondering if there are other ideas like this floating around the world? I hop into Thinkspace.
 
 I sit back and observe similar ideas . . .
 
@@ -32,9 +32,9 @@ As these ideas steadily move past my screen, one particular idea catches my atte
 ![out](https://user-images.githubusercontent.com/27021764/34580783-30235052-f15c-11e7-8ec8-2ade21c7d7d2.gif)
 
 ------------------------------------------------------------------------------------
-**Case Two**
+**Case Two**:
 
-I've had a profound thought I believe can greatly increase the productivity at my office. For better or worse I don't want to take credit, still I want this idea to be known. I log into ThinkSpace and share my idea annonymously and watch as others interact. 
+I've had a profound thought I believe can greatly increase the productivity at my office. I want to share this idea with my peers and managers, without risking it being a total dud. I log into ThinkSpace and share my idea annonymously.
 
 ![out](https://user-images.githubusercontent.com/27021764/34581609-16e916a0-f15f-11e7-9209-d9babab4cd9e.gif)
 
