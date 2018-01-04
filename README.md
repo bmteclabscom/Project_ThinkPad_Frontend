@@ -6,7 +6,7 @@
 
 ## Overview
  
-<h3>Project: Thinkspace is a virtual environment allowing users to share and view ideas, annonymously.</h3>
+<h3>Project: Thinkspace is a virtual reality environment allowing users to share and view ideas, annonymously.</h3>
 
 I've been inspired to create a 3D virtual space where an individual can add an idea reflecting on any topic or question without having to consider who will see it and how they may be judged. I see this being useful anywhere from an office which wants to promote employees to share opinions, to being used as a social network for individuals to see opinions from around people they may not typically interact with. 
 
