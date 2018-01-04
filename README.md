@@ -1,6 +1,6 @@
 
 
-<img width="150" alt="logo" src="https://user-images.githubusercontent.com/27021764/34579984-2d8bb990-f159-11e7-8700-be32e9c10a0a.png">
+![out](https://user-images.githubusercontent.com/27021764/34580061-87fc5ace-f159-11e7-8453-272fbda16a4b.png)
 # Project: Thinkspace
 A virtual space for annonymously sharing ideas. 
 
