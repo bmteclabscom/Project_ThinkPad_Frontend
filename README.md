@@ -15,10 +15,9 @@ I've been inspired to create a space where a human can without worry add an idea
 
 In example . . . 
 
-I heard an idea which I thought was amazing and unique. This idea inspired and assisted me to see the world in a way I hadn't before. I'm now wondering if there are other ideas like this floating around the world? I hop into Thinkspace and set filters using key words relating to the inspiring idea.
+I heard an idea which I thought was amazing and unique. This idea inspired and assisted me to see the world in a way I hadn't before. I'm now wondering if there are other ideas like this floating around the world? I hop into Thinkspace.
 
-I sit back and watch as other ideas relating to this key word begin to appear in my space. I can now sit back and observe these ideas . . .
-
+I sit back and observe these ideas . . .
 
 ![out](https://user-images.githubusercontent.com/27021764/34579187-f1b288c0-f155-11e7-83f3-0c18b24929a1.gif)
 
@@ -26,6 +25,10 @@ As these ideas steadily move past my screen, one particular idea catches my atte
 
 ![out](https://user-images.githubusercontent.com/27021764/34580783-30235052-f15c-11e7-8ec8-2ade21c7d7d2.gif)
 
+
+I now have the flexibility to interact with this idea. Using a provided interface I can then interact with the idea, either promoting, demoting, or conveying emotional response.
+
+** This feature is not yet released, but is currently being worked on ** 
 
 
 ## $$$
