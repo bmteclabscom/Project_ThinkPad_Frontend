@@ -1,3 +1,5 @@
+## This repository hold the front-end code for Project: Thinkspace.
+
 
 
 ![out](https://user-images.githubusercontent.com/27021764/34580061-87fc5ace-f159-11e7-8453-272fbda16a4b.png)
@@ -6,7 +8,7 @@
 
 ## Overview
  
-<h3>Project: Thinkspace is a virtual reality environment allowing users to share and view ideas, annonymously.</h3>
+### Project: Thinkspace is a virtual reality environment allowing users to share and view ideas, annonymously.
 
 I'm inspired to create a 3D virtual space where an individual can add an idea reflecting on any topic or question without having to consider who will see it and how they may be judged. That same user may then search the ThinkSpace database for similar ideas, based on various filters. I see this being useful anywhere from an office that wants to promote employees to share opinions to being an annonymous social network including ideas from around the world.
 
