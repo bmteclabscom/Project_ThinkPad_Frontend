@@ -12,9 +12,11 @@ I've been inspired to create a 3D virtual space where an individual can add an i
 
 Users have their own **spaces** which would be dynamically altered by a custom **filter interface**. When a user sets and saves their filter interface, their **3D virtual environment** would find relevant ideas and introduce them to our users space. The user may then **interact** with the ideas, further modify the filters, or even **add** their own ideas. 
 
-Examples of how someone might use ThinkSpace.
+
 
 ------------------------------------------------------------------------------------
+### Examples of how someone might use ThinkSpace.
+
 **Case One**
 
 I've heard an idea which I think amazing and unique. This idea inspired and assisted me to see the world in a way I hadn't before. I'm now wondering if there are other ideas like this floating around the world? I hop into Thinkspace.
