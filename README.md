@@ -1,12 +1,14 @@
-<h1> Project: Thinkspace </h1>
-<h3> React VR FrontEnd && Vanilla Javascript <h3>
-<h3> </h3>
+# Project: Thinkspace
+A virtual space for annonymously sharing ideas. 
 
-<p> This repository holds the front end technology used for Project: Thinkspace <p>
+## How it works
+ 
 
-<h3> Main Features </h3>
- <ul>
-  <li> 'Virtual Reality' technology </li> 
-  </ul>
-  
-  
+Project: Thinkspace is a virtual environment which references frameworks such as React Native and and React-VR to create an environment accessible from multiple devices.
+
+![alt text](https://i.imgur.com/SevMzZQ.jpg)
+
+
+
+
+
