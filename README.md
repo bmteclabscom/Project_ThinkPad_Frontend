@@ -13,7 +13,7 @@ Project: Thinkspace is a virtual environment allowing users to share and view id
 
 I've been inspired to create a space where a human can without worry add an idea on any topic or question without having to consider who will see it and how they will be judged. My intention is to build a virtual world where users are given a space in which they can attract personally interesting ideas using custom filters. Users may then interact with any ideas which appear upon creation of their new filter. 
 
-In example . . . 
+**Case One**
 
 I heard an idea which I thought was amazing and unique. This idea inspired and assisted me to see the world in a way I hadn't before. I'm now wondering if there are other ideas like this floating around the world? I hop into Thinkspace.
 
@@ -29,6 +29,12 @@ As these ideas steadily move past my screen, one particular idea catches my atte
 I now have the flexibility to interact with this idea. Using a provided interface I can then interact with the idea, either promoting, demoting, or conveying emotional response.
 
 ** This feature is not yet released, but is currently being worked on ** 
+
+**Case Two**
+
+I had a profound thought I believe can greatly increase the productivity at my office, but I don't want to take credit for the idea. I log into ThinkSpace and share my idea annonymously and watch as others interact. 
+
+![out](https://user-images.githubusercontent.com/27021764/34581609-16e916a0-f15f-11e7-9209-d9babab4cd9e.gif)
 
 
 ## $$$
