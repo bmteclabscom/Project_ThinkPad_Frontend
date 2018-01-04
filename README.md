@@ -1,14 +1,30 @@
 # Project: Thinkspace
 A virtual space for annonymously sharing ideas. 
 
-## How it works
+## Overview
  
 
-Project: Thinkspace is a virtual environment which references frameworks such as React Native and and React-VR to create an environment accessible from multiple devices.
+Project: Thinkspace is a virtual environment allowing users to share and view ideas, annonymously.
 
 ![alt text](https://i.imgur.com/SevMzZQ.jpg)
 
 
 
+## $$$
 
+## Technologies
+
+### Languages
+* Javascript
+* HTML
+* CSS
+
+### Frameworks
+* React-VR
+* React-Native
+* Redux
+
+### Guest Appearences
+* Codepen for animated text.
+* Codepen for overlayed animated clouds.
 
